@@ -1,0 +1,119 @@
+
+#count {
+    text-align: center;
+    margin: 20px;
+    font: 30px arial, sans-serif;
+}
+
+#div-id-chess {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    width: 60vw;
+    margin: auto;
+    background-size: 100%;
+    text-align: center;
+}
+
+#bigcell {
+    display: flex;
+    background-color: aquamarine;
+    border: solid 3px lightseagreen;
+    border-radius: 8px;
+    width: 468px;
+    height: 468px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+.cell {
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 3px;
+    font-size: 0;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.flag {
+    background: red;
+    background: url('../img/flag.jpg');
+    background-size: 100%;
+    z-index: 100;
+}
+
+.x0 {
+    background: lightgreen;
+    transition: background 2s;
+}
+
+@keyframes boom {
+    0% {
+        background-color: #fff;
+    }
+
+    25% {
+        background: url('../img/mine.jpg');
+        background-size: 100%;
+    }
+
+    50% {
+        background: rgb(235, 63, 11);
+    }
+
+    75% {
+        background: url('../img/mine.jpg');
+        background-size: 100%;
+    }
+
+    100% {
+        background: red;
+    }
+}
+
+.x {
+    animation: boom 1.5s !important;
+    background: url('../img/mine.jpg');
+    background-size: 100%;
+    font-size: 0 !important;
+}
+
+.x1 {
+    background: rgb(43, 145, 97);
+    transition: background 2s;
+}
+
+.x2 {
+    background: rgb(32, 35, 167);
+    transition: background 2s;
+}
+
+.x3 {
+    background: rgb(139, 70, 58);
+    transition: background 2s;
+}
+
+.x4 {
+    background: rgb(223, 44, 13);
+    transition: background 2s;
+}
+
+@keyframes myfontsize {
+    from {
+        font-size: 0;
+    }
+
+    to {
+        font-size: 35px;
+    }
+}
+
+.showfont {
+    animation: myfontsize 0.6s;
+    font-size: 35px;
+}
