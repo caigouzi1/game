@@ -20,7 +20,8 @@
 
 #bigcell {
     display: flex;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
+    background-size: 100%;
     border: solid 3px lightseagreen;
     border-radius: 8px;
     width: 468px;
@@ -48,7 +49,7 @@
 }
 
 .x0 {
-    background: lightgreen;
+    background: none;
     transition: background 2s;
 }
 
@@ -84,22 +85,38 @@
 }
 
 .x1 {
-    background: rgb(43, 145, 97);
+    background: url('../img/x1.png');
+    background-size: 100%;
     transition: background 2s;
 }
 
 .x2 {
-    background: rgb(32, 35, 167);
+    background: url('../img/x2.png');
+    background-size: 100%;
     transition: background 2s;
 }
 
 .x3 {
-    background: rgb(139, 70, 58);
+    background: url('../img/x3.png');
+    background-size: 100%;
     transition: background 2s;
 }
 
 .x4 {
-    background: rgb(223, 44, 13);
+    background: url('../img/x4.png');
+    background-size: 100%;
+    transition: background 2s;
+}
+
+.x5 {
+    background: url('../img/x5.png');
+    background-size: 100%;
+    transition: background 2s;
+}
+
+.x6 {
+    background: url('../img/x6.png');
+    background-size: 100%;
     transition: background 2s;
 }
 

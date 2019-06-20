@@ -4,8 +4,8 @@ function setNode(arr, x, y) {
     let node = document.getElementById(`${x}x${y}`)
     let num = arr[x][y]
     classname = `x${num}`
-    if (num > 4) {
-        classname = `x4`
+    if (num > 6) {
+        classname = `x6`
     } else if (num === 'x') {
         classname = `x`
     }
@@ -177,8 +177,23 @@ function init(row, line, num) {
     bindEvent(divChess, 'mousedown', rightClick)
 }
 
+function getbackground(mydiv){
+    let imgs = [
+        'background1.jpg',
+        'background2.jpg',
+        'background3.jpg',
+        'background4.jpg',
+        'background5.jpg'
+    ]
+    let rand = getRandNum(imgs.length) - 1
+    background = imgs[rand]
+    mydiv.style.backgroundImage= `url(./img/${background})`
+}
+
 function main() {
     init(9, 9, 10)
+    let bigcell = e('#bigcell')
+    getbackground(bigcell)
 }
 
 main()
