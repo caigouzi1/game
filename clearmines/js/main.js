@@ -108,7 +108,7 @@ function init(row, line, num) {
             if (chess.arr[data.x][data.y] === 'x') {
                 target.classList.add(`x`)
                 showAllBoom(chess)
-                alert('你玩的像cxk')
+                alert('你失败了，下次加油')
 
                 // 解绑事件
                 divChess.removeEventListener("click", leftClick);
@@ -154,7 +154,7 @@ function init(row, line, num) {
                 if (flagMineNum == chess.num) {
                     if (findMineNum == chess.num) {
                         showAllBoom(chess)
-                        alert('suc')
+                        alert('恭喜你成功了')
                     } else {
                         // 全部标记但是有错误
                         // alert('有错误')
@@ -190,10 +190,24 @@ function getbackground(mydiv){
     mydiv.style.backgroundImage= `url(./img/${background})`
 }
 
-function main() {
-    init(9, 9, 10)
+function shouye(){
     let bigcell = e('#bigcell')
-    getbackground(bigcell)
+    let myclick = function(){
+        getbackground(bigcell)
+        let cell = es('.cell')
+        for(i = 0; i < cell.length; i++){
+            cell[i].style.display = "inline-block"
+        }
+        bigcell.removeEventListener("click", myclick);
+    }
+    bindEvent(bigcell,'click',myclick)
+}
+
+function main() {
+    
+    init(9, 9, 6)
+    shouye()
+    // getbackground(bigcell)
 }
 
 main()

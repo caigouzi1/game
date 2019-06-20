@@ -13,6 +13,11 @@ var e = function (element) {
     return document.querySelector(element)
 }
 
+// 获取页面所有元素
+var es = function (element) {
+    return document.querySelectorAll(element)
+}
+
 // 给父元素的子节点添加内容
 var appendHtml = function (element, html) {
     element.insertAdjacentHTML('beforeend', html)

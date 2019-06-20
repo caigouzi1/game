@@ -20,7 +20,7 @@
 
 #bigcell {
     display: flex;
-    /* background-color: aquamarine; */
+    background: url('../img/shouye.jpg');
     background-size: 100%;
     border: solid 3px lightseagreen;
     border-radius: 8px;
@@ -32,10 +32,11 @@
 }
 
 .cell {
-    display: inline-block;
+    display: none;
     background-color: #fff;
     border-radius: 3px;
     font-size: 0;
+    color:blue;
     width: 50px;
     height: 50px;
     line-height: 50px;
